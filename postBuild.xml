@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project name="postBuild" default="go" basedir=".">
+	<property name="builders.dir" value="${basedir}/../../Builders" />
+	<import file="${builders.dir}/Utilities.xml" />
+
+	<target name="go" depends="Utilities.init">
+		<ant antfile="${builders.dir}/02~Deploy.xml" target="deploy" />
+	</target>
+</project>

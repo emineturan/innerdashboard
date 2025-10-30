@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{01EFEF5E-91AC-488C-83CE-7CE51724C887}</ProjectGuid>
+    <RootNamespace>GenericDashboardGenerator</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2013_opengl</QtInstall>
+    <QtModules>
+    </QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>msvc2013_opengl</QtInstall>
+    <QtModules>
+    </QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings">
+    <!-- <Import Project="..\..\Builders\custombuildrules\KonvoyBuildRules.props" />-->
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <!-- <Import Project="..\..\Builders\PropertySheets\LibQT.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\EXESettingsWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\DebugBuildSettingsWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibBoostWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimIOManagerWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimFrameworkWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\QTDIRWIN32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibXerces2_8.props" />-->
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <!--<Import Project="..\..\Builders\PropertySheets\EXESettings.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\DebugBuildSettings.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibBoost.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibQT.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimIOManager.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimFramework.props" />-->
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <!-- <Import Project="..\..\Builders\PropertySheets\LibQT.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\EXESettingsWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\ReleaseBuildSettingsWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibBoostWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimIOManagerWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimFrameworkWin32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\QTDIRWIN32.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibXerces2_8.props" />-->
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <!--<Import Project="..\..\Builders\PropertySheets\EXESettings.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\ReleaseBuildSettings.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibBoost.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibQT.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimIOManager.props" />-->
+    <!--<Import Project="..\..\Builders\PropertySheets\LibSimFramework.props" />-->
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>C:\E\repo\GenericDashboardGenerator\x64\Debug</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.\GeneratedFiles;.\;.\Inputs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <QtRcc>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <InitFuncName>GenericDashboardGenerator</InitFuncName>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent />
+    <Link>
+      <OutputFile>C:\E\repo\GenericDashboardGenerator\x64\Debug\GenericDashboardGenerator.exe</OutputFile>
+      <AdditionalDependencies>Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Xml.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\Qt5.13.1\5.13.1\msvc2017_64\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions);QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.\GeneratedFiles;.\;.\Inputs;%(AdditionalIncludeDirectories);C:\Qt\Qt5.13.1\5.13.1\msvc2017_64\include;C:\Qt\Qt5.13.1\5.13.1\msvc2017_64\include\QtCore;C:\Qt\Qt5.13.1\5.13.1\msvc2017_64\include\QtGui;C:\Qt\Qt5.13.1\5.13.1\msvc2017_64\include\QtWidgets;C:\Qt\Qt5.13.1\5.13.1\msvc2017_64\include\QtXml;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtWidgets;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtCore;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtGui;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtWidgets;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtXml</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>C:\Users\EMİNE\Desktop\GenericDashboardGeneratorson\GenericDashboardGenerator\Debugx64\GenericDashboardGenerator.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>GenericDashboardGenerator</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <OutputFile>$(DeployDir)$(Configuration)x64\$(ProjectName).exe</OutputFile>
+      <AdditionalDependencies>Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;Qt6Xml.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.\GeneratedFiles;.\;.\Inputs;%(AdditionalIncludeDirectories);;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtWidgets;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtCore;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtGui;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtWidgets;C:\Qt\Qt5.13.1\5.13.1\msvc2019_64\include\QtXml</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>GenericDashboardGenerator</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.\GeneratedFiles;.\;.\Inputs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.\GeneratedFiles\$(ConfigurationName)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>GenericDashboardGenerator</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.\GeneratedFiles</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.\GeneratedFiles</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AddedElement.cpp" />
+    <ClCompile Include="AddMultipleSceneItem.cpp" />
+    <ClCompile Include="BarCustomSceneItem.cpp" />
+    <ClCompile Include="BarSceneItemEdit.cpp" />
+    <ClCompile Include="CustomRectSceneItem.cpp" />
+    <ClCompile Include="CustomRectSceneItemEdit.cpp" />
+    <ClCompile Include="CustomSceneItem.cpp" />
+    <ClCompile Include="DashboardGeneratorGui.cpp" />
+    <ClCompile Include="EditGraphicsViewWidget.cpp" />
+    <ClCompile Include="IbreCustomSceneItem.cpp" />
+    <ClCompile Include="IbreSceneItemEdit.cpp" />
+    <ClCompile Include="InnerDashboardItem.cpp" />
+    <ClCompile Include="InnerDashboardItemEdit.cpp" />
+    <ClCompile Include="InnerWidgetItem.cpp" />
+    <ClCompile Include="InnerWidgetItemEdit.cpp" />
+    <ClCompile Include="Inputs\ButtonInput.cpp" />
+    <ClCompile Include="Inputs\ButtonInputDialog.cpp" />
+    <ClCompile Include="Inputs\Input.cpp" />
+    <ClCompile Include="Inputs\RotatableInputItemEdit.cpp" />
+    <ClCompile Include="Inputs\RotatableStateOfInput.cpp" />
+    <ClCompile Include="Inputs\SetupTransitionProperties.cpp" />
+    <ClCompile Include="Inputs\StateOfInputs.cpp" />
+    <ClCompile Include="Inputs\TouchAreaOfState.cpp" />
+    <ClCompile Include="Inputs\TransitionConditionWidget.cpp" />
+    <ClCompile Include="Inputs\TransitionOfState.cpp" />
+    <ClCompile Include="Logging.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PixmapCustomSceneItem.cpp" />
+    <ClCompile Include="Inputs\PixmapInputSceneItem.cpp" />
+    <ClCompile Include="SceneItemEdit.cpp" />
+    <ClCompile Include="SetGroupScreen.cpp" />
+    <ClCompile Include="SliderCustomSceneItem.cpp" />
+    <ClCompile Include="SliderSceneItemEdit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Resources\GenericDashboardGenerator.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_en.ts" />
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_ga.ts" />
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_ru.ts" />
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_tr.ts" />
+    <Konvoy_Deployable_Files Include="postBuild.xml" />
+    <Konvoy_Deployable_Files Include="preBuild.xml">
+      <SubType>Designer</SubType>
+    </Konvoy_Deployable_Files>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonUtilities\CommonUtilities.vcxproj">
+      <Project>{1fb295fc-de93-42d1-8ac8-8d51df017c74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GlobalDeployment2013\GlobalDeployment2013.vcxproj">
+      <Project>{a50691c0-e24a-487a-b102-1b87a0eb5bf5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SimIOManager\SimIOManager.vcxproj">
+      <Project>{86fff0e4-0933-45ac-ba0a-0f8762aadb77}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="InnerWidgetItem.h" />
+    <QtMoc Include="InnerWidgetItemEdit.h" />
+    <ClInclude Include="Inputs\ButtonInput.h" />
+    <QtMoc Include="Inputs\ButtonInputDialog.h" />
+    <ClInclude Include="Inputs\GenericDefinitions.h" />
+    <ClInclude Include="Inputs\Input.h" />
+    <QtMoc Include="Inputs\SetupTransitionProperties.h" />
+    <QtMoc Include="Inputs\RotatableInputItemEdit.h" />
+    <ClInclude Include="Inputs\RotatableStateOfInput.h" />
+    <ClInclude Include="Inputs\StateOfInputs.h" />
+    <ClInclude Include="Inputs\TouchAreaOfState.h" />
+    <QtMoc Include="Inputs\TransitionConditionWidget.h" />
+    <ClInclude Include="Inputs\TransitionOfState.h" />
+    <QtMoc Include="EditGraphicsViewWidget.h" />
+    <QtMoc Include="SetGroupScreen.h" />
+    <ClInclude Include="InnerDashboardItem.h" />
+    <QtMoc Include="InnerDashboardItemEdit.h" />
+    <ClInclude Include="Logging.h" />
+    <ClInclude Include="PixmapCustomSceneItem.h" />
+    <ClInclude Include="Inputs\PixmapInputSceneItem.h" />
+    <ClInclude Include="SliderCustomSceneItem.h" />
+    <QtMoc Include="SliderSceneItemEdit.h" />
+    <QtMoc Include="SceneItemEdit.h" />
+    <CustomBuild Include="CustomSceneItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
+    <QtMoc Include="AddMultipleSceneItem.h" />
+    <ClInclude Include="BarCustomSceneItem.h" />
+    <QtMoc Include="BarSceneItemEdit.h" />
+    <ClInclude Include="CustomRectSceneItem.h" />
+    <QtMoc Include="CustomRectSceneItemEdit.h" />
+    <ClInclude Include="IbreCustomSceneItem.h" />
+    <QtMoc Include="IbreSceneItemEdit.h" />
+    <ClInclude Include="ItemTypes.h" />
+    <QtMoc Include="DashboardGeneratorGui.h" />
+    <QtMoc Include="AddedElement.h" />
+    <ClInclude Include="GenericDashboardGeneratorDefs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="DashboardGeneratorGui.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="AddedElement.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="SceneItemEdit.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="AddMultipleSceneItem.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="IbreSceneItemEdit.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="BarSceneItemEdit.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="CustomRectSceneItemEdit.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="SliderSceneItemEdit.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="SetGroupScreen.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="InnerDashboardItemEdit.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="EditGraphicsViewWidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Inputs\ButtonInputDialog.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Inputs\SetupTransitionProperties.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Inputs\TransitionConditionWidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Inputs\RotatableInputItemEdit.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="InnerWidgetItemEdit.ui" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
+  <ImportGroup Label="ExtensionTargets">
+    <!-- <Import Project="..\..\Builders\custombuildrules\KonvoyBuildRules.targets" />-->
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion="4.5.3" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

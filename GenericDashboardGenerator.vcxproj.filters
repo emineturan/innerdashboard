@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DashboardGeneratorGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddedElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomSceneItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneItemEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IbreCustomSceneItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="AddMultipleSceneItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IbreSceneItemEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BarCustomSceneItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="BarSceneItemEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomRectSceneItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomRectSceneItemEdit.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="SliderCustomSceneItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="SliderSceneItemEdit.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="SetGroupScreen.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="InnerDashboardItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="InnerDashboardItemEdit.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="EditGraphicsViewWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PixmapCustomSceneItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\ButtonInput.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\ButtonInputDialog.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\Input.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\SetupTransitionProperties.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\StateOfInputs.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\TouchAreaOfState.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\TransitionConditionWidget.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\TransitionOfState.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\PixmapInputSceneItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\RotatableInputItemEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Inputs\RotatableStateOfInput.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="InnerWidgetItem.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+    <ClCompile Include="InnerWidgetItemEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logging.cpp">
+      <Filter>TranslatorHelper.h</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Resources\GenericDashboardGenerator.qrc" />
+    <QtMoc Include="DashboardGeneratorGui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="DashboardGeneratorGui.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="AddedElement.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="AddedElement.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <CustomBuild Include="CustomSceneItem.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="SceneItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="SceneItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="AddMultipleSceneItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="AddMultipleSceneItem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="IbreSceneItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="IbreSceneItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="BarSceneItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="BarSceneItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CustomRectSceneItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="CustomRectSceneItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="SliderSceneItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="SliderSceneItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="SetGroupScreen.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="SetGroupScreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="InnerDashboardItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="InnerDashboardItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EditGraphicsViewWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="EditGraphicsViewWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Inputs\ButtonInputDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Inputs\SetupTransitionProperties.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Inputs\TransitionConditionWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="Inputs\ButtonInputDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Inputs\SetupTransitionProperties.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Inputs\TransitionConditionWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Inputs\RotatableInputItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="Inputs\RotatableInputItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <CustomBuild Include="InnerWidgetItem.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <QtMoc Include="InnerWidgetItemEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="InnerWidgetItemEdit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <Konvoy_Deployable_Files Include="postBuild.xml" />
+    <Konvoy_Deployable_Files Include="preBuild.xml" />
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_en.ts">
+      <Filter>Translation Files</Filter>
+    </Konvoy_Deployable_Files>
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_ga.ts">
+      <Filter>Translation Files</Filter>
+    </Konvoy_Deployable_Files>
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_ru.ts">
+      <Filter>Translation Files</Filter>
+    </Konvoy_Deployable_Files>
+    <Konvoy_Deployable_Files Include="GenericDashboardGenerator_tr.ts">
+      <Filter>Translation Files</Filter>
+    </Konvoy_Deployable_Files>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="TranslatorHelper.h">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="TranslatorHelper.h\Debug">
+      <UniqueIdentifier>{e4009a4b-88b7-496d-b67d-028b21854291}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="TranslatorHelper.h\Release">
+      <UniqueIdentifier>{d2bedb6c-c51e-4243-b738-a2e31ae1f51f}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GenericDashboardGeneratorDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IbreCustomSceneItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BarCustomSceneItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomRectSceneItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SliderCustomSceneItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InnerDashboardItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PixmapCustomSceneItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\GenericDefinitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\StateOfInputs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\TouchAreaOfState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\TransitionOfState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\ButtonInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\PixmapInputSceneItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs\RotatableStateOfInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

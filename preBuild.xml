@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project name="preBuild" default="go" basedir=".">
+	<property name="builders.dir" value="${basedir}/../../Builders" />
+	<import file="${builders.dir}/Utilities.xml" />
+		
+	<target name="go" depends="Utilities.init">
+		<antcall target="clean" />
+    <antcall target="buildQTLinguistFiles" />
+	</target>
+
+  <target name="buildQTLinguistFiles">
+    <mkdir dir="${basedir}/${configuration.name}" />
+    <outofdate outputsources="resource.locations" separator=";">
+      <sourcefiles>
+        <fileset dir=".">
+          <include name="*.ts" />
+        </fileset>
+      </sourcefiles>
+      <mapper type="glob" dir="." from="*.ts" to="${basedir}/${configuration.name}/*.qm" />
+    </outofdate>
+    <foreach target="executeQTLinguist" param="resource.location" inheritall="true" list="${resource.locations}" delimiter=";" />
+  </target>
+
+  <target name="executeQTLinguist">
+    <echo>Generating QT Translation file (qm) for ${resource.location}</echo>
+    <basename file="${resource.location}" property="my.base.name" suffix=".ts" />
+    <echo>Basename=${my.base.name}</echo>
+
+    <if>
+      <equals arg1="${resource.locations}" arg2="" />
+      <then>
+        <echo>Nothing to make</echo>
+      </then>
+      <else>
+        <exec executable="${envVars.QTDIR}/bin/lrelease.exe">
+          <arg value="${resource.location}" />
+          <arg value="-qm" />
+          <arg value="${basedir}/${configuration.name}/${my.base.name}.qm" />
+        </exec>
+      </else>
+    </if>
+  </target>
+  
+	<target name="clean">
+		<if>
+			<equals arg1="${cleanup}" arg2="true" />
+			<then>
+				<!--Do cleanup-->
+			</then>
+		</if>
+	</target>
+</project>
